@@ -2,6 +2,12 @@
 
 一个无需安装依赖的静态个人作品集网站，包含单屏可交互的玻璃封面、点击进入的拼贴作品目录、以 GENTLE MONSTER、mist、Desigual 与 WUFF 为主的品牌项目、手工作品、账号运营、社会实践与个人介绍。
 
+## 在线访问
+
+- 正式网站：<https://yangchicao465.github.io/huang-yongyu-portfolio/>
+- GitHub 仓库：<https://github.com/yangchicao465/huang-yongyu-portfolio>
+- 发布方式：GitHub Pages，直接使用 `main` 分支根目录，无构建步骤；更新并推送 `main` 后会重新发布。
+
 ## 本地预览
 
 在这个文件夹运行：
