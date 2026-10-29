@@ -1,0 +1,6 @@
+tmp/
+output/
+assets/portfolio-pdf/
+gcm-diagnose.log
+.DS_Store
+Thumbs.db

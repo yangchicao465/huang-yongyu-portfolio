@@ -1,0 +1,218 @@
+[
+  {
+    "page": 1,
+    "slug": "01-cover-and-butterfly",
+    "sizes": [
+      {
+        "file": "01-cover-and-butterfly-720.webp",
+        "width": 720,
+        "height": 855,
+        "bytes": 69906
+      },
+      {
+        "file": "01-cover-and-butterfly-1280.webp",
+        "width": 1280,
+        "height": 1520,
+        "bytes": 135202
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "slug": "02-glass-loop",
+    "sizes": [
+      {
+        "file": "02-glass-loop-720.webp",
+        "width": 720,
+        "height": 744,
+        "bytes": 87482
+      },
+      {
+        "file": "02-glass-loop-1280.webp",
+        "width": 1280,
+        "height": 1322,
+        "bytes": 159500
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "slug": "03-kinetic-identities",
+    "sizes": [
+      {
+        "file": "03-kinetic-identities-720.webp",
+        "width": 720,
+        "height": 700,
+        "bytes": 53450
+      },
+      {
+        "file": "03-kinetic-identities-1280.webp",
+        "width": 1280,
+        "height": 1245,
+        "bytes": 108040
+      }
+    ]
+  },
+  {
+    "page": 4,
+    "slug": "04-ideas-and-sketches",
+    "sizes": [
+      {
+        "file": "04-ideas-and-sketches-720.webp",
+        "width": 720,
+        "height": 867,
+        "bytes": 53618
+      },
+      {
+        "file": "04-ideas-and-sketches-1280.webp",
+        "width": 1280,
+        "height": 1541,
+        "bytes": 115514
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "slug": "05-type-rotation",
+    "sizes": [
+      {
+        "file": "05-type-rotation-720.webp",
+        "width": 720,
+        "height": 505,
+        "bytes": 25160
+      },
+      {
+        "file": "05-type-rotation-1280.webp",
+        "width": 1280,
+        "height": 898,
+        "bytes": 47418
+      }
+    ]
+  },
+  {
+    "page": 6,
+    "slug": "06-colour-direction",
+    "sizes": [
+      {
+        "file": "06-colour-direction-720.webp",
+        "width": 720,
+        "height": 829,
+        "bytes": 69802
+      },
+      {
+        "file": "06-colour-direction-1280.webp",
+        "width": 1280,
+        "height": 1474,
+        "bytes": 139060
+      }
+    ]
+  },
+  {
+    "page": 7,
+    "slug": "07-extension-concept",
+    "sizes": [
+      {
+        "file": "07-extension-concept-720.webp",
+        "width": 720,
+        "height": 826,
+        "bytes": 45660
+      },
+      {
+        "file": "07-extension-concept-1280.webp",
+        "width": 1280,
+        "height": 1468,
+        "bytes": 84968
+      }
+    ]
+  },
+  {
+    "page": 8,
+    "slug": "08-jewellery-system",
+    "sizes": [
+      {
+        "file": "08-jewellery-system-720.webp",
+        "width": 720,
+        "height": 621,
+        "bytes": 36654
+      },
+      {
+        "file": "08-jewellery-system-1280.webp",
+        "width": 1280,
+        "height": 1104,
+        "bytes": 68618
+      }
+    ]
+  },
+  {
+    "page": 9,
+    "slug": "09-eyewear-study",
+    "sizes": [
+      {
+        "file": "09-eyewear-study-720.webp",
+        "width": 720,
+        "height": 850,
+        "bytes": 37920
+      },
+      {
+        "file": "09-eyewear-study-1280.webp",
+        "width": 1280,
+        "height": 1512,
+        "bytes": 70138
+      }
+    ]
+  },
+  {
+    "page": 10,
+    "slug": "10-objects-detail",
+    "sizes": [
+      {
+        "file": "10-objects-detail-720.webp",
+        "width": 720,
+        "height": 501,
+        "bytes": 19566
+      },
+      {
+        "file": "10-objects-detail-1280.webp",
+        "width": 1280,
+        "height": 890,
+        "bytes": 36044
+      }
+    ]
+  },
+  {
+    "page": 11,
+    "slug": "11-storefront",
+    "sizes": [
+      {
+        "file": "11-storefront-720.webp",
+        "width": 720,
+        "height": 911,
+        "bytes": 84846
+      },
+      {
+        "file": "11-storefront-1280.webp",
+        "width": 1280,
+        "height": 1620,
+        "bytes": 166460
+      }
+    ]
+  },
+  {
+    "page": 12,
+    "slug": "12-thank-you",
+    "sizes": [
+      {
+        "file": "12-thank-you-720.webp",
+        "width": 720,
+        "height": 373,
+        "bytes": 18112
+      },
+      {
+        "file": "12-thank-you-1280.webp",
+        "width": 1280,
+        "height": 663,
+        "bytes": 38410
+      }
+    ]
+  }
+]

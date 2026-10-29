@@ -1,0 +1,29 @@
+{
+  "project": "WUFF pet lifestyle brand",
+  "source": "宠物品牌pdf.pdf",
+  "pdfPages": 3,
+  "sitePdf": "full-project.pdf",
+  "displayLabelsRemoved": 5,
+  "sitePdfBytes": 10606384,
+  "pdfPosterSizePt": [
+    3005.03,
+    13068.3
+  ],
+  "webpOutputs": [
+    {
+      "name": "01-brand-story-and-identity",
+      "desktop": "1550x6739",
+      "mobile": "720x3131"
+    },
+    {
+      "name": "02-packaging-and-stationery",
+      "desktop": "1550x6700",
+      "mobile": "720x3112"
+    },
+    {
+      "name": "03-campaign-and-retail",
+      "desktop": "1550x6700",
+      "mobile": "720x3112"
+    }
+  ]
+}

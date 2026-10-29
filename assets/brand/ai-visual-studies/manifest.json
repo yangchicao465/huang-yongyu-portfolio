@@ -1,0 +1,32 @@
+{
+  "type": "AI-assisted commercial visual studies",
+  "imageCount": 5,
+  "format": "WebP",
+  "items": [
+    {
+      "file": "01-day-market.webp",
+      "title": "白日设计集",
+      "category": "Event campaign"
+    },
+    {
+      "file": "02-morning-white-tea.webp",
+      "title": "晨雾白苔",
+      "category": "Fragrance e-commerce"
+    },
+    {
+      "file": "03-iced-coffee.webp",
+      "title": "夏日冷萃",
+      "category": "Beverage campaign"
+    },
+    {
+      "file": "04-deep-hydration.webp",
+      "title": "深层注水",
+      "category": "Skincare e-commerce"
+    },
+    {
+      "file": "05-soy-candle.webp",
+      "title": "晚灯与书",
+      "category": "Home fragrance"
+    }
+  ]
+}
