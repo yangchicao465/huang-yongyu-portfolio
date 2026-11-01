@@ -7,8 +7,8 @@
 - 项目：黄泳豫个人作品集，静态单页网站。
 - 技术栈：原生 HTML、CSS、JavaScript；无 `package.json`、无构建工具、无前端依赖。
 - 本地运行：在项目根目录执行 `python -m http.server 4173`，访问 `http://localhost:4173`。
-- Git：本地分支为 `main`，首次提交为 `12862b6`；GitHub 公开仓库为 `yangchicao465/huang-yongyu-portfolio`，GitHub Pages 已从远端 `main` 根目录发布。远端因当前环境无法直连 Git 推送端点而通过 GitHub API 创建提交 `f4d1622`，两边文件树内容一致但提交对象不同；后续网络恢复后优先以 GitHub 远端为协作基准。
-- 当前工作区：`main` 分支；视频与目录改版修改了 `index.html`、`styles.css`、`script.js`、`README.md` 与 `project_memory.md`，并新增 `assets/portfolio-directory/`。此前的 `assets/projects/ai-mural-video/`、`assets/projects/gentle-monster/motion/`、`assets/projects/pixel-wardrobe-video/`、`assets/projects/my-portfolio-player/`、`assets/projects/sheep-walk-motion/`、`assets/projects/portfolio-walk-film/`、`assets/projects/portfolio-walk-avantgarde-10s/`、`assets/projects/portfolio-walk-7s/` 与 `assets/projects/portfolio-practice-map/` 仍处于未提交状态；当前没有提交、推送或发布。
+- Git：GitHub 公开仓库为 `yangchicao465/huang-yongyu-portfolio`；远端 `main` 当前部署提交为 `12b9af62f68b2049a7baba2f1a8400349660a287`，父提交为 `16a02795b1f2ae6df2f4b9ef51a07780036b29e8`。本轮因大型 Git 传输连接中断，改用 GitHub 认证 API 上传 15 个文件并更新引用；后续应以远端提交为协作基准。
+- 当前工作区：原始源码目录已完成 7 秒开场、霓虹目录、三段当前网页视频与 WUFF 清理稿；远端部署包含这些网页实际引用的文件和素材。`assets/projects/pixel-wardrobe-video/`、`assets/projects/my-portfolio-player/`、`assets/projects/sheep-walk-motion/`、`assets/projects/portfolio-walk-film/`、`assets/projects/portfolio-walk-avantgarde-10s/` 与 `assets/projects/portfolio-practice-map/` 仍是独立交付素材，未加入站点资源树。
 - Gitee：已通过 GitHub 授权绑定账号，并导入公开镜像仓库 `works-by-huang-yongyu/huang-yongyu-portfolio`；`main` 分支远端提交为 `16a02795b1f2ae6df2f4b9ef51a07780036b29e8`，根目录包含完整的 `index.html`、`styles.css`、`script.js` 与 `assets/`。本地已添加名为 `gitee` 的远程地址。Gitee 当前仓库“服务”菜单已无 Pages 项，直访仓库 `/pages` 返回 404，暂无可用的 Gitee Pages 发布入口。
 - 在线站点：国内访问优先使用 `https://huang-yongyu-portfolio.netlify.app/`；GitHub Pages 备用地址为 `https://yangchicao465.github.io/huang-yongyu-portfolio/`。
 - Netlify：站点名 `huang-yongyu-portfolio`，由 `yangchicao465/huang-yongyu-portfolio` 的 `main` 分支持续部署，发布目录为仓库根目录 `.`，无构建命令；已通过 GitHub 应用安装与首次部署验证，后续推送 `main` 会自动发布。
@@ -202,6 +202,7 @@
 - 精选 PDF 已生成并逐页渲染检查：共 53 页、53 个书签，文件大小 19,540,870 字节；原图页按素材本身比例成页，并统一以 JPEG 质量 78 嵌入，海报、手作和运营编排页为 842 × 595 pt 横版 A4。
 - PDF 目录标签直接叠加在四个苹果蛋壳面上；手作为三页九件作品的极简三图排版；海报只保留总标题和图片；运营以一页大图账号总览和三页大图代表内容呈现公开页面数据，不推断后台成交、营业额或私域转化。
 - PDF 内的品牌/海报/手工/运营内容均来自当前站点素材和文案；海报页保留 AI 生成声明，Desigual 与 WUFF 保留独立概念/视觉全案属性，运营数据注明快照日期。
+- 2026-11-01 正式部署核验：远端 `main` 指向 `12b9af62`；Netlify 首页已提供新版 7 秒开场、霓虹目录和动态影像引用。公开站点中 7 秒开场视频返回 `200 OK`、14,155,715 字节、`video/mp4`；霓虹目录 WebP 返回 `200 OK`、309,412 字节、`image/webp`；“数字壁画”视频返回 `200 OK`、7,911,896 字节、`video/mp4`。Netlify 会在 HTML 注释中注入托管说明，因此线上 HTML 字节哈希与源文件不同；源文件 `index.html` 仍为 118,032 字节、SHA-256 前 16 位 `20638F2A80A0DB94`。
 
 ## 后续更新规则
 
