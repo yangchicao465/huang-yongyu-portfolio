@@ -21,7 +21,11 @@ window.addEventListener("keydown", (event) => {
 });
 
 const directorySection = document.querySelector("#skills");
-const enterDirectoryButton = document.querySelector(".portfolio-start");
+const introSection = document.querySelector(".portfolio-intro");
+const introVideo = document.querySelector("#portfolio-intro-video");
+const introStartButton = document.querySelector(".intro-start");
+const introAudioButton = document.querySelector(".intro-audio");
+const introProgress = document.querySelector(".intro-progress span");
 const backToCoverButton = document.querySelector(".back-to-cover");
 const backToDirectoryButton = document.querySelector(".back-to-directory");
 const portfolioSections = [
@@ -30,6 +34,56 @@ const portfolioSections = [
 const portfolioSectionMap = new Map(
   portfolioSections.map((section) => [section.id, section]),
 );
+
+function syncIntroAudioButton() {
+  if (!introVideo || !introAudioButton) return;
+
+  const soundOn = !introVideo.muted;
+  const label = introAudioButton.querySelector(".intro-audio__label");
+  if (label) label.textContent = soundOn ? "声音 ON" : "声音 OFF";
+  introAudioButton.setAttribute("aria-pressed", String(soundOn));
+  introAudioButton.setAttribute("aria-label", soundOn ? "关闭声音" : "打开声音");
+}
+
+function updateIntroProgress() {
+  if (!introVideo) return;
+
+  const duration = Number.isFinite(introVideo.duration) ? introVideo.duration : 0;
+  const progress = duration > 0 ? Math.min(1, introVideo.currentTime / duration) : 0;
+  introSection?.style.setProperty("--intro-progress", `${(progress * 100).toFixed(2)}%`);
+  if (introProgress) introProgress.setAttribute("aria-hidden", "true");
+}
+
+function startIntroVideo() {
+  if (
+    !introVideo ||
+    !introSection ||
+    !document.body.classList.contains("home-locked")
+  ) {
+    return;
+  }
+
+  if (!introVideo.paused) return;
+  if (introVideo.ended) introVideo.currentTime = 0;
+
+  introSection.classList.add("is-playing");
+  const playAttempt = introVideo.play();
+  if (playAttempt) {
+    playAttempt.catch(() => {
+      introSection.classList.remove("is-playing");
+      introStartButton?.focus({ preventScroll: true });
+    });
+  }
+}
+
+function resetIntroVideo() {
+  if (!introVideo) return;
+
+  introVideo.pause();
+  introVideo.currentTime = 0;
+  introSection?.classList.remove("is-playing");
+  introSection?.style.setProperty("--intro-progress", "0%");
+}
 
 function clearActiveSection() {
   portfolioSections.forEach((section) => section.classList.remove("is-active-section"));
@@ -50,6 +104,7 @@ function updateHistory(hash, mode) {
 function openDirectory(event, options = {}) {
   event?.preventDefault();
   setMenu(false);
+  introVideo?.pause();
   document.body.classList.remove("home-locked");
   document.body.classList.remove("view-section");
   document.body.classList.add("view-directory");
@@ -84,10 +139,31 @@ function returnToCover(event, options = {}) {
   clearActiveSection();
   updateHistory("", options.historyMode ?? "replace");
   window.scrollTo(0, 0);
-  enterDirectoryButton?.focus({ preventScroll: true });
+  resetIntroVideo();
+  requestAnimationFrame(() => introStartButton?.focus({ preventScroll: true }));
 }
 
-enterDirectoryButton?.addEventListener("click", openDirectory);
+introVideo?.removeAttribute("muted");
+if (introVideo) introVideo.muted = false;
+syncIntroAudioButton();
+
+introStartButton?.addEventListener("click", startIntroVideo);
+introAudioButton?.addEventListener("click", () => {
+  if (!introVideo) return;
+  introVideo.muted = !introVideo.muted;
+  syncIntroAudioButton();
+});
+introSection?.addEventListener("click", (event) => {
+  if (event.target.closest("a, button")) return;
+  startIntroVideo();
+});
+introVideo?.addEventListener("timeupdate", updateIntroProgress);
+introVideo?.addEventListener("ended", () => {
+  updateIntroProgress();
+  if (document.body.classList.contains("home-locked")) {
+    openDirectory(null, { historyMode: "replace" });
+  }
+});
 backToCoverButton?.addEventListener("click", returnToCover);
 backToDirectoryButton?.addEventListener("click", openDirectory);
 
@@ -129,7 +205,7 @@ window.addEventListener("popstate", () => {
     openSection(target, null, { historyMode: "none" });
   } else if (target === "skills") {
     openDirectory(null, { historyMode: "none" });
-  } else {
+  } else if (!target || target === "top") {
     returnToCover(null, { historyMode: "none" });
   }
 });

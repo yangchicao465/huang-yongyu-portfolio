@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="黄泳豫的个人作品集：品牌设计、视觉设计、美术手工与账号运营。"
+      content="黄泳豫的个人作品集：品牌设计、视觉设计、AI 影像、美术手工与账号运营。"
     />
     <meta name="theme-color" content="#f2efe6" />
     <meta name="color-scheme" content="light" />
@@ -16,14 +16,14 @@
     <meta property="og:title" content="黄泳豫 | 品牌与视觉设计" />
     <meta
       property="og:description"
-      content="品牌设计、视觉设计、美术手工与账号运营作品集。"
+      content="品牌设计、视觉设计、AI 影像、美术手工与账号运营作品集。"
     />
     <meta property="og:locale" content="zh_CN" />
     <meta name="twitter:card" content="summary" />
     <title>黄泳豫 | 品牌与视觉设计</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20261029d" />
-    <script src="script.js?v=20261029d" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261101-intro" />
+    <script src="script.js?v=20261101-intro" defer></script>
     <script>
       document.documentElement.classList.add("js");
     </script>
@@ -76,8 +76,55 @@
     </nav>
 
     <main id="main">
-      <section class="hero kinetic-hero" id="top" aria-labelledby="hero-title">
+      <section class="hero kinetic-hero portfolio-intro" id="top" aria-labelledby="hero-title">
         <h1 class="sr-only" id="hero-title">黄泳豫作品集</h1>
+
+        <video
+          class="intro-video"
+          id="portfolio-intro-video"
+          muted
+          playsinline
+          preload="metadata"
+          poster="assets/projects/portfolio-walk-7s/portfolio-walk-7s-player-cover.webp"
+          aria-label="黄泳豫作品集七秒开场影像"
+        >
+          <source
+            src="assets/projects/portfolio-walk-7s/portfolio-walk-7s.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="intro-interface">
+          <div class="intro-brand" aria-hidden="true">
+            <span>HUANG YONGYU</span>
+            <strong>PORTFOLIO / 2026</strong>
+          </div>
+
+          <button class="intro-start" type="button">
+            <span class="intro-start__icon" aria-hidden="true"></span>
+            <span class="intro-start__copy">
+              <strong>点击任意位置开始</strong>
+              <small>CLICK ANYWHERE TO PLAY · 00:07</small>
+            </span>
+          </button>
+
+          <div class="intro-controls">
+            <button
+              class="intro-audio"
+              type="button"
+              aria-pressed="true"
+              aria-label="关闭声音"
+            >
+              <span class="intro-audio__signal" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="intro-audio__label">声音 ON</span>
+            </button>
+            <a class="intro-skip" href="#skills">跳过开场 <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="intro-progress" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
 
         <div class="hero-atmosphere" aria-hidden="true">
           <span class="foliage foliage--left"></span>
@@ -88,7 +135,7 @@
         <div class="kinetic-intro">
           <p class="eyebrow">PORTFOLIO / 2026</p>
           <p>
-            品牌 · 视觉 · 美术 · 手工<br />
+            品牌 · 视觉 · AI 影像 · 手工<br />
             一个认真玩的人
           </p>
         </div>
@@ -162,8 +209,64 @@
         </div>
       </section>
 
-      <section class="skills-menu" id="skills" aria-labelledby="skills-title" tabindex="-1">
+      <section
+        class="skills-menu portfolio-directory"
+        id="skills"
+        aria-labelledby="skills-title"
+        tabindex="-1"
+      >
         <button class="back-to-cover" type="button">← 返回封面</button>
+        <div class="directory-map">
+          <div class="directory-stage">
+            <picture>
+              <source
+                srcset="assets/portfolio-directory/neon-path-directory.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/portfolio-directory/neon-path-directory.png"
+                width="1518"
+                height="1036"
+                decoding="async"
+                alt="霓虹像素路径目录，包含品牌、手绘手作与运营三个作品方向。"
+              />
+            </picture>
+
+            <a
+              class="directory-path directory-path--brand"
+              href="#work"
+              aria-label="进入品牌作品集"
+            >
+              <span class="sr-only">品牌作品集</span>
+            </a>
+            <a
+              class="directory-path directory-path--handmade"
+              href="#handmade"
+              aria-label="进入手绘手工作品集"
+            >
+              <span class="sr-only">手绘手工作品集</span>
+            </a>
+            <a
+              class="directory-path directory-path--social"
+              href="#social"
+              aria-label="进入运营作品"
+            >
+              <span class="sr-only">运营作品</span>
+            </a>
+          </div>
+
+          <nav class="directory-mobile-nav" aria-label="作品目录">
+            <a href="#work"><span>01</span><strong>品牌</strong><small>BRAND</small></a>
+            <a href="#handmade"><span>02</span><strong>手绘手作</strong><small>HANDMADE</small></a>
+            <a href="#social"><span>03</span><strong>运营</strong><small>OPERATIONS</small></a>
+          </nav>
+
+          <p class="directory-guide">
+            <span>SELECT A PATH</span>
+            点击霓虹路径，进入作品
+          </p>
+        </div>
+
         <div class="skills-backdrop" aria-hidden="true">
           <span class="skills-paper skills-paper--cream"></span>
           <span class="skills-paper skills-paper--blue"></span>
@@ -287,12 +390,13 @@
 
       <section class="work gallery-work" id="work" aria-label="品牌项目">
         <nav class="work-switcher" aria-label="品牌项目切换">
-          <span>SELECTED BRAND WORK / 04 PROJECTS</span>
+          <span>SELECTED WORK / 04 PROJECTS + AI FILM</span>
           <div class="work-switcher-links">
             <a href="#gentle-monster">01 GENTLE MONSTER</a>
             <a href="#mist">02 MIST</a>
             <a href="#desigual">03 DESIGUAL</a>
             <a href="#wuff">04 WUFF</a>
+            <a href="#brand-ai-visuals">05 AI FILM</a>
           </div>
         </nav>
 
@@ -507,6 +611,110 @@
             </a>
           </footer>
         </article>
+
+        <section
+          class="brand-motion-suite"
+          id="monster-motion"
+          aria-labelledby="brand-motion-title"
+        >
+          <header class="brand-ai-heading brand-motion-heading reveal">
+            <div>
+              <p>CASE 01 / AI MOTION EXTENSION</p>
+              <h2 id="brand-motion-title">镜面生物<br /><em>动态延展</em></h2>
+              <strong>让折叠维度继续运动。</strong>
+            </div>
+            <div class="brand-ai-copy brand-motion-copy">
+              <span class="brand-ai-count" aria-hidden="true">02<br />FILMS</span>
+              <p>
+                沿用“以镜观骨，以虫观我”的折叠维度，以两段短影像测试金属甲虫、粉色镜片与包体形态之间的连续转换。
+              </p>
+              <p class="brand-ai-disclosure">
+                <strong>AI 生成声明</strong>
+                两段影像均由 AI 辅助生成，作为 GENTLE MONSTER 独立概念延展，不代表品牌官方发布、商业委托或真实商品实拍。
+              </p>
+            </div>
+          </header>
+
+          <div class="brand-motion-grid">
+            <figure class="brand-motion-card reveal">
+              <div class="brand-motion-media">
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="assets/projects/gentle-monster/motion/monster-mirror-morph-poster.webp"
+                  width="1280"
+                  height="720"
+                  aria-label="GENTLE MONSTER AI 动态延展：镜面甲虫与包体形态转换"
+                >
+                  <source
+                    src="assets/projects/gentle-monster/motion/monster-mirror-morph.mp4"
+                    type="video/mp4"
+                  />
+                  <p>
+                    你的浏览器暂不支持此视频，
+                    <a
+                      href="assets/projects/gentle-monster/motion/monster-mirror-morph.mp4"
+                      >打开视频文件</a
+                    >。
+                  </p>
+                </video>
+                <span class="brand-ai-badge">AI 生成</span>
+                <span class="brand-motion-number" aria-hidden="true">01</span>
+              </div>
+              <figcaption>
+                <p class="brand-motion-kicker">MOTION 01 / 00:11</p>
+                <h3>镜面甲虫</h3>
+                <p>
+                  让甲虫的外骨骼与包体共享同一条金属曲线，在游走与变形中保持身体的完整感。
+                </p>
+                <div class="brand-motion-spec">
+                  <span>1280 × 720</span>
+                  <span>30 FPS / SOUND</span>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="brand-motion-card reveal">
+              <div class="brand-motion-media">
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="assets/projects/gentle-monster/motion/monster-glasses-morph-poster.webp"
+                  width="1280"
+                  height="720"
+                  aria-label="GENTLE MONSTER AI 动态延展：戴镜甲虫折叠为镜面形态"
+                >
+                  <source
+                    src="assets/projects/gentle-monster/motion/monster-glasses-morph.mp4"
+                    type="video/mp4"
+                  />
+                  <p>
+                    你的浏览器暂不支持此视频，
+                    <a
+                      href="assets/projects/gentle-monster/motion/monster-glasses-morph.mp4"
+                      >打开视频文件</a
+                    >。
+                  </p>
+                </video>
+                <span class="brand-ai-badge">AI 生成</span>
+                <span class="brand-motion-number" aria-hidden="true">02</span>
+              </div>
+              <figcaption>
+                <p class="brand-motion-kicker">MOTION 02 / 00:07</p>
+                <h3>戴镜之后</h3>
+                <p>
+                  粉色镜片落在金属甲虫头部，随后收束为镜面包体，并以 “Monster” 字样完成最后一眼。
+                </p>
+                <div class="brand-motion-spec">
+                  <span>1280 × 720</span>
+                  <span>30 FPS / SOUND</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
 
         <article class="brand-case brand-case--mist" id="mist" aria-labelledby="mist-title">
           <header class="mist-intro">
@@ -1058,16 +1266,65 @@
               <strong>从版式探索，到商品场景。</strong>
             </div>
             <div class="brand-ai-copy">
-              <span class="brand-ai-count" aria-hidden="true">5<br />FRAMES</span>
+              <span class="brand-ai-count" aria-hidden="true">5+1<br />WORKS</span>
               <p>
-                以活动海报、香氛、饮品、护肤与家居香氛为题，尝试不同品类从标题系统、商品呈现到氛围场景的视觉表达。
+                以活动海报、香氛、饮品、护肤与家居香氛为题，尝试不同品类从标题系统、商品呈现到氛围场景的视觉表达，并用一段动态影像延伸记忆的流动。
               </p>
               <p class="brand-ai-disclosure">
                 <strong>AI 生成声明</strong>
-                以下 5 张图片均由 AI 辅助生成，用于视觉方向与版式探索，不代表真实商品、商业委托或实拍记录。
+                以下 5 张图片与 1 段动态影像均由 AI 辅助生成，用于视觉方向、版式与叙事探索，不代表真实商品、商业委托或实拍记录。
               </p>
             </div>
           </header>
+
+          <figure class="brand-ai-film reveal">
+            <div class="brand-ai-film-media">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/projects/ai-mural-video/digital-mural-ai-video-poster.webp"
+                width="960"
+                height="544"
+                aria-label="AI 生成的暖色动画短片《数字壁画》"
+                aria-describedby="brand-ai-film-description"
+              >
+                <source
+                  src="assets/projects/ai-mural-video/digital-mural-ai-video.mp4"
+                  type="video/mp4"
+                />
+                <p>
+                  你的浏览器暂不支持此视频，
+                  <a href="assets/projects/ai-mural-video/digital-mural-ai-video.mp4"
+                    >打开视频文件</a
+                  >。
+                </p>
+              </video>
+              <span class="brand-ai-badge">AI 生成</span>
+              <span class="brand-ai-film-format">MP4 / H.264</span>
+            </div>
+            <figcaption class="brand-ai-film-caption">
+              <p class="brand-ai-film-kicker">01 / AI ANIMATED FILM</p>
+              <h3>数字壁画</h3>
+              <p id="brand-ai-film-description">
+                从银杏街巷、归家门口到热闹集市，用一段连续的暖色动画，串联日常记忆与人物归途。
+              </p>
+              <dl class="brand-ai-film-facts">
+                <div>
+                  <dt>DURATION</dt>
+                  <dd>00:54</dd>
+                </div>
+                <div>
+                  <dt>FRAME</dt>
+                  <dd>960 × 544 / 30 FPS</dd>
+                </div>
+                <div>
+                  <dt>TYPE</dt>
+                  <dd>AI 动态影像</dd>
+                </div>
+              </dl>
+            </figcaption>
+          </figure>
 
           <div class="brand-ai-grid">
             <figure class="brand-ai-card reveal">
@@ -2336,7 +2593,7 @@
         </div>
         <div class="contact-footer">
           <span>© <span id="current-year">2026</span> 黄泳豫</span>
-          <span>品牌设计 · 视觉设计 · 美术手工 · 账号运营</span>
+          <span>品牌设计 · 视觉设计 · AI 影像 · 美术手工 · 账号运营</span>
           <a href="#top">回到顶部 ↑</a>
         </div>
       </section>
